@@ -3,7 +3,6 @@ package ir.khorrami.learningpackage.MVVM.Heros.view;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -29,7 +28,8 @@ public class ShowHerosActivity extends AppCompatActivity {
         rvHeroesList.setHasFixedSize(true);
         rvHeroesList.setLayoutManager(new LinearLayoutManager(this));
 
-        HeroViewModel heroViewModel = ViewModelProviders.of(this).get(HeroViewModel.class);
+        HeroViewModel heroViewModel =new ViewModelProvider(this).get(HeroViewModel.class);
+//        HeroViewModel heroViewModel =new ViewModelProvider().get(HeroViewModel.class);
 
         heroViewModel.getHeroes()
                 .observe(this, new Observer<List<Heros>>() {
