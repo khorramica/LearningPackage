@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fromFragment">
+
+    <fragment
+        android:id="@+id/fromFragment"
+        android:name="ir.khorrami.learningpackage.Navigation.fromFragment"
+        android:label="fragment_from"
+        tools:layout="@layout/fragment_from" >
+        <action
+            android:id="@+id/action_fromFragment_to_toFragment"
+            app:destination="@id/toFragment" />
+        <argument
+            android:name="MyKey"
+            app:argType="string"
+            android:defaultValue="10000" />
+    </fragment>
+    <fragment
+        android:id="@+id/toFragment"
+        android:name="ir.khorrami.learningpackage.Navigation.ToFragment"
+        android:label="fragment_to"
+        tools:layout="@layout/fragment_to" >
+        <action
+            android:id="@+id/action_toFragment_to_fromFragment"
+            app:destination="@id/fromFragment" />
+        <argument
+            android:name="MyKey"
+            app:argType="string" />
+    </fragment>
+</navigation>
