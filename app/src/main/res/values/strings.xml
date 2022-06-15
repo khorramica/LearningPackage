@@ -9,4 +9,7 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="from_fragment">Send Hello from fragment</string>
+    <string name="to_fragment">Receive hello in fragment</string>
 </resources>
