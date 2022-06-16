@@ -40,7 +40,7 @@ Button btnFrom;
         btnFrom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavDirections action = fromFragmentDirections.actionFromFragmentToToFragment("dddddddddddddddddd");
+                NavDirections action = fromFragmentDirections.actionFromFragmentToToFragment().setMyKey("Its OK");
                 Navigation.findNavController(view).navigate(action);
             }
         });

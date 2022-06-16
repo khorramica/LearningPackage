@@ -13,10 +13,6 @@
         <action
             android:id="@+id/action_fromFragment_to_toFragment"
             app:destination="@id/toFragment" />
-        <argument
-            android:name="MyKey"
-            app:argType="string"
-            android:defaultValue="10000" />
     </fragment>
     <fragment
         android:id="@+id/toFragment"
@@ -25,9 +21,12 @@
         tools:layout="@layout/fragment_to" >
         <action
             android:id="@+id/action_toFragment_to_fromFragment"
-            app:destination="@id/fromFragment" />
+            app:destination="@id/fromFragment"
+            app:enterAnim="@animator/nav_default_enter_anim" />
         <argument
             android:name="MyKey"
-            app:argType="string" />
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="defvalue" />
     </fragment>
 </navigation>
