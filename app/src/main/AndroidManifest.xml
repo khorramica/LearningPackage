@@ -12,32 +12,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LearningPackage">
         <activity
-            android:name=".Navigation.NavigationActivity"
+            android:name=".Room.RoomDbActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".Navigation.NavigationActivity"
+            android:exported="true">
         </activity>
         <activity
             android:name=".Retrofit.RetrofitActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".RxJava.Just.RxJava_JustActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".RxJava.Range.RxJava_RangeActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".RxJava.Create.RxJava_Create"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".MVVM.Heros.view.ShowHerosActivity"
             android:exported="true" />
