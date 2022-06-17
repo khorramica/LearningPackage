@@ -1,5 +1,6 @@
 package ir.khorrami.learningpackage.Room.Entity;
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
@@ -7,16 +8,20 @@ import androidx.room.PrimaryKey;
 @Entity
 public class Employee {
 
-    @PrimaryKey
-    public int id;
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "Id")
+    @NonNull
+    private int id;
 
     @ColumnInfo(name = "FirstName")
-    public String firstName;
+    @NonNull
+    private String firstName;
 
     @ColumnInfo(name = "Lastname")
-    public String lastName;
+    @NonNull
+    private String lastName;
 
-    public Employee(String firstName, String lastName) {
+    public Employee(@NonNull String firstName,@NonNull String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
     }

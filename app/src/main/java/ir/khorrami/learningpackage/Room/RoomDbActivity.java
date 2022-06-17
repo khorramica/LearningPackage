@@ -29,11 +29,12 @@ public class RoomDbActivity extends AppCompatActivity {
         btnInsert = findViewById(R.id.btn_Insert);
 
 
-        btnList.setOnClickListener(new View.OnClickListener() {
+        btnInsert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                 db = Room.databaseBuilder(getApplicationContext(),
-                        AppDatabase.class, "EmployeeSystem").build();
+                 db = AppDatabase.getInstance(getApplicationContext());
+//                         Room.databaseBuilder(getApplicationContext(),
+//                        AppDatabase.class, "EmployeeSystem").build();
 
                 userDao = db.employeeDao();
                 Employee employee = new Employee("Reza", "Khorrami");
