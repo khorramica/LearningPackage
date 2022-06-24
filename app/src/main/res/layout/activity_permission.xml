@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".Permission.PermissionActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Add Permission"
+        android:id="@+id/btn_Permission"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_Camera_Permission"
+        android:text="Camera"
+        android:layout_below="@id/btn_Permission"
+        android:layout_centerInParent="true"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/purple_700"
+        android:layout_marginTop="15dp"/>
+
+    <Button
+        android:id="@+id/btn_Storage_Permission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_Camera_Permission"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/black"
+        android:text="Storage"
+        android:textAllCaps="false" />
+
+</RelativeLayout>
