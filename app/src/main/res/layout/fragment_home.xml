@@ -1,15 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".HomeFragment">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:text="Home" />
+        android:layout_height="match_parent"
+        tools:context=".HomeFragment">
 
-</RelativeLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/map3" />
+
+        <RelativeLayout
+            android:layout_width="250dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/date_holder"
+            android:elevation="8dp"
+            android:padding="16dp">
+            <TextView
+                android:id="@+id/txtDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="شنبه 18 تیر 1401"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+            <TextClock
+                android:layout_width="match_parent"
+                android:layout_below="@id/txtDate"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textSize="21sp"
+                android:gravity="center"
+                android:format24Hour="HH:mm:ss"
+                android:format12Hour="HH:mm:ss"
+                android:textStyle="bold" />
+            />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_alignParentLeft="true"
+                android:layout_height="60dp"
+                android:src="@drawable/inout" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>

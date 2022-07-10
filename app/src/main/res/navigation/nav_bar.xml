@@ -4,31 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_bar"
     app:startDestination="@id/homeFragment">
-
     <fragment
-        android:id="@+id/homeFragment"
-        android:name="ir.khorrami.learningpackage.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/messagesFragment"
+        android:name="ir.khorrami.learningpackage.MessagesFragment"
+        android:label="fragment_messages"
+        tools:layout="@layout/fragment_messages" />
     <fragment
-        android:id="@+id/settingFragment"
-        android:name="ir.khorrami.learningpackage.SettingFragment"
-        android:label="fragment_setting"
-        tools:layout="@layout/fragment_setting" />
+        android:id="@+id/requestFragment"
+        android:name="ir.khorrami.learningpackage.RequestFragment"
+        android:label="fragment_request"
+        tools:layout="@layout/fragment_request" />
+    <fragment
+        android:id="@+id/reportFragment"
+        android:name="ir.khorrami.learningpackage.ReportFragment"
+        android:label="fragment_report"
+        tools:layout="@layout/fragment_report" />
     <fragment
         android:id="@+id/profileFragment"
         android:name="ir.khorrami.learningpackage.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
     <fragment
-        android:id="@+id/mainFragment"
-        android:name="ir.khorrami.learningpackage.MainFragment"
+        android:id="@+id/homeFragment"
+        android:name="ir.khorrami.learningpackage.HomeFragment"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main" />
-    <fragment
-        android:id="@+id/messagesFragment"
-        android:name="ir.khorrami.learningpackage.MessagesFragment"
-        android:label="fragment_messages"
-        tools:layout="@layout/fragment_messages" />
+        tools:layout="@layout/fragment_home" />
+
 
 </navigation>

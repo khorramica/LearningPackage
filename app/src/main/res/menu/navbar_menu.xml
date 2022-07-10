@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/homeFragment"
-        android:icon="@drawable/ic_baseline_home_24"
-        android:title="خانه" />
-    <item
-        android:id="@+id/profileFragment"
-        android:icon="@drawable/ic_baseline_account_circle_24"
-        android:title="پروفایل" />
-    <item
-        android:id="@+id/mainFragment"
-        android:title="" />
-    <item
         android:id="@+id/messagesFragment"
         android:icon="@drawable/ic_baseline_notifications_24"
-        android:title="پیام ها" />
+        android:title="پیام" />
     <item
-        android:id="@+id/settingFragment"
-        android:icon="@drawable/ic_baseline_settings_24"
-        android:title="تنظیمات" />
+        android:id="@+id/requestFragment"
+        android:icon="@drawable/baseline_edit_calendar_24"
+        android:title="مجوز" />
+
+    <item
+        android:id="@+id/homeFragment"
+        android:title="" />
+
+    <item
+        android:id="@+id/reportFragment"
+        android:icon="@drawable/baseline_view_list_24"
+        android:title="گزارش" />
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/baseline_perm_identity_24"
+        android:title="پروفایل" />
 </menu>
