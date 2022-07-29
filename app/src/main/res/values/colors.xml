@@ -8,6 +8,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="my_statusbar_color">#461F8C</color>
+    <color name="colorPrimary">#0088ff</color>
+    <color name="colorPrimaryDark">#005ccb</color>
+    <color name="colorAccent">#0c0e59</color>
 
 
 </resources>

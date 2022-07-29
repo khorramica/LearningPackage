@@ -5,6 +5,12 @@
       <map>
         <entry key="..\:/Projects/Android/LearningPackage/app/src/main/res/drawable-v24/baseline_perm_identity_24.xml" value="0.132" />
         <entry key="..\:/Projects/Android/LearningPackage/app/src/main/res/drawable-v24/baseline_view_list_24.xml" value="0.132" />
+        <entry key="..\:/Projects/Android/LearningPackage/app/src/main/res/drawable-v24/border_shadow.xml" value="0.1845" />
+        <entry key="..\:/Projects/Android/LearningPackage/app/src/main/res/drawable-v24/custom_thumb.xml" value="0.1845" />
+        <entry key="..\:/Projects/Android/LearningPackage/app/src/main/res/drawable-v24/ic_arrow_down_24.xml" value="0.1" />
+        <entry key="..\:/Projects/Android/LearningPackage/app/src/main/res/drawable-v24/seekbar_progress.xml" value="0.1845" />
+        <entry key="..\:/Projects/Android/LearningPackage/app/src/main/res/drawable-v24/seekbar_style.xml" value="0.1845" />
+        <entry key="..\:/Projects/Android/LearningPackage/app/src/main/res/drawable-v24/thumb_style.xml" value="0.1845" />
         <entry key="..\:/Projects/Android/LearningPackage/app/src/main/res/drawable/badge.xml" value="0.149" />
         <entry key="..\:/Projects/Android/LearningPackage/app/src/main/res/drawable/baseline_edit_calendar_24.xml" value="0.132" />
         <entry key="..\:/Projects/Android/LearningPackage/app/src/main/res/drawable/bnv_tab_item_foreground.xml" value="0.1835" />
@@ -16,11 +22,13 @@
         <entry key="..\:/Projects/Android/LearningPackage/app/src/main/res/drawable/ic_request_24.xml" value="0.149" />
         <entry key="..\:/Projects/Android/LearningPackage/app/src/main/res/drawable/nav_background.xml" value="0.1565" />
         <entry key="..\:/Projects/Android/LearningPackage/app/src/main/res/layout/activity_login.xml" value="0.23802083333333332" />
+        <entry key="..\:/Projects/Android/LearningPackage/app/src/main/res/layout/activity_lottie.xml" value="0.23802083333333332" />
         <entry key="..\:/Projects/Android/LearningPackage/app/src/main/res/layout/activity_nav_bar.xml" value="0.264" />
-        <entry key="..\:/Projects/Android/LearningPackage/app/src/main/res/layout/activity_nav_bar2.xml" value="0.3369397217928903" />
+        <entry key="..\:/Projects/Android/LearningPackage/app/src/main/res/layout/activity_nav_bar2.xml" value="0.5950540958268934" />
         <entry key="..\:/Projects/Android/LearningPackage/app/src/main/res/layout/activity_nav_bar3.xml" value="0.4841101694915254" />
         <entry key="..\:/Projects/Android/LearningPackage/app/src/main/res/layout/activity_navigation.xml" value="0.1" />
         <entry key="..\:/Projects/Android/LearningPackage/app/src/main/res/layout/activity_permission.xml" value="0.23802083333333332" />
+        <entry key="..\:/Projects/Android/LearningPackage/app/src/main/res/layout/activity_progress_bar.xml" value="0.23802083333333332" />
         <entry key="..\:/Projects/Android/LearningPackage/app/src/main/res/layout/activity_room_db.xml" value="0.23802083333333332" />
         <entry key="..\:/Projects/Android/LearningPackage/app/src/main/res/layout/activity_rx_java_behavior_relay.xml" value="0.18333333333333332" />
         <entry key="..\:/Projects/Android/LearningPackage/app/src/main/res/layout/activity_rx_java_publish_relay.xml" value="0.1921875" />
@@ -31,6 +39,8 @@
         <entry key="..\:/Projects/Android/LearningPackage/app/src/main/res/layout/fragment_report.xml" value="0.1712962962962963" />
         <entry key="..\:/Projects/Android/LearningPackage/app/src/main/res/layout/fragment_request.xml" value="0.23802083333333332" />
         <entry key="..\:/Projects/Android/LearningPackage/app/src/main/res/layout/fragment_setting.xml" value="0.23802083333333332" />
+        <entry key="..\:/Projects/Android/LearningPackage/app/src/main/res/layout/new_seekbar.xml" value="0.6455026455026455" />
+        <entry key="..\:/Projects/Android/LearningPackage/app/src/main/res/layout/seekbar_back.xml" value="0.23697916666666666" />
         <entry key="..\:/Projects/Android/LearningPackage/app/src/main/res/menu/navbar_menu.xml" value="0.23802083333333332" />
         <entry key="..\:/projects/Android/Learning/LearningPackage/app/src/main/res/layout/activity_rx_java_sample01.xml" value="0.26979166666666665" />
         <entry key="..\:/projects/Android/Learning/LearningPackage/app/src/main/res/layout/activity_show_heros.xml" value="0.3546875" />
