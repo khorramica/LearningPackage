@@ -7,6 +7,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -22,12 +23,12 @@ public class ProgressBarActivity extends AppCompatActivity {
     private boolean increasing = false;
     private boolean userDragging = true;
     private boolean progressEffect = false;
-    TextView txtvals, txtIncrese, txtBackText;
+    TextView txtvals, txtIncrese, txtBackText, txtIsExit, txtIsEnter;
     Button btnSave;
     boolean userIsEnter = true;
     boolean userIsExit = false;
-    final int SEEK_MIN_VALUE = 13;
-    final int SEEK_MAX_VALUE = 87;
+    final int SEEK_MIN_VALUE = 9;
+    final int SEEK_MAX_VALUE = 91;
 
 
     @Override
@@ -39,16 +40,43 @@ public class ProgressBarActivity extends AppCompatActivity {
         txtIncrese = findViewById(R.id.txtIncrese);
         btnSave = findViewById(R.id.btnClear);
         txtBackText = findViewById(R.id.txtBack);
-        seekBar.setProgress(SEEK_MAX_VALUE);
+        txtIsEnter = findViewById(R.id.txtUserIsEnter);
+        txtIsExit = findViewById(R.id.txtUserIsExit);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            seekBar.setProgress(SEEK_MAX_VALUE, true);
+        } else
+            seekBar.setProgress(SEEK_MAX_VALUE);
+
         userIsEnter = false;
         userIsExit = true;
+
         SeekBar.OnSeekBarChangeListener changeListener = new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progressValue, boolean fromUser) {
+                if (progressValue <= SEEK_MIN_VALUE) {
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                        seekBar.setProgress(SEEK_MIN_VALUE, true);
+                    } else
+                        seekBar.setProgress(SEEK_MIN_VALUE);
+
+                    return;
+
+                }
+
+                if (progressValue > SEEK_MAX_VALUE) {
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                        seekBar.setProgress(SEEK_MAX_VALUE, true);
+                    } else
+                        seekBar.setProgress(SEEK_MAX_VALUE);
+
+                    return;
+
+                }
+
                 userDragging = fromUser;
                 if (fromUser) {
                     txtBackText.setVisibility(View.GONE);
-                    increasing = (progressValue - progressPreValue) >= SEEK_MIN_VALUE;
+                    increasing = (progressValue - progressPreValue) >= 0;
                     txtvals.setText("Prevalue : " + String.valueOf(progressPreValue) + "value : " + String.valueOf(progressValue));
                     progressPreValue = progressValue;
                     txtIncrese.setText(increasing ? "True" : "False");
@@ -71,7 +99,11 @@ public class ProgressBarActivity extends AppCompatActivity {
                         userIsEnter = false;
                         userIsExit = true;
                         seekBar.setEnabled(false);
-                        seekBar.setProgress(SEEK_MAX_VALUE);
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                            seekBar.setProgress(SEEK_MAX_VALUE, true);
+                        } else
+                            seekBar.setProgress(SEEK_MAX_VALUE);
+
                         Toast.makeText(getApplicationContext(), "Ready for ENTER", Toast.LENGTH_SHORT).show();
                         progressPreValue = SEEK_MAX_VALUE;
 //                            txtBackText.setText("خروج");
@@ -84,7 +116,11 @@ public class ProgressBarActivity extends AppCompatActivity {
                         userIsEnter = true;
                         userIsExit = false;
                         seekBar.setEnabled(false);
-                        seekBar.setProgress(SEEK_MIN_VALUE);
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                            seekBar.setProgress(SEEK_MIN_VALUE, true);
+                        } else
+                            seekBar.setProgress(SEEK_MIN_VALUE);
+
                         Toast.makeText(getApplicationContext(), "Ready for EXIT", Toast.LENGTH_SHORT).show();
                         progressPreValue = SEEK_MIN_VALUE;
                         txtBackText.setText("ورود");
@@ -92,7 +128,10 @@ public class ProgressBarActivity extends AppCompatActivity {
                     }
                 }
 //                    seekBar.setThumb(getThumb(progress));
+                txtIsEnter.setText("IsEnter : " + (userIsEnter ? "True" : "False"));
+                txtIsExit.setText("IsExit   : " + (userIsExit ? "True" : "False"));
             }
+
 //                onClick2();
 //                seekBar.setEnabled(true);
             //seekBar.setOnSeekBarChangeListener(this);
@@ -108,9 +147,17 @@ public class ProgressBarActivity extends AppCompatActivity {
             public void onStopTrackingTouch(SeekBar seekBar) {
 //                if (seekBar.getProgress() > 30 && seekBar.getProgress() < 70)
                 if (increasing) {
-                    seekBar.setProgress(SEEK_MIN_VALUE);
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                        seekBar.setProgress(SEEK_MIN_VALUE, true);
+                    } else
+                        seekBar.setProgress(SEEK_MIN_VALUE);
+
                 } else if (!increasing) {
-                    seekBar.setProgress(SEEK_MAX_VALUE);
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                        seekBar.setProgress(SEEK_MAX_VALUE, true);
+                    } else
+                        seekBar.setProgress(SEEK_MAX_VALUE);
+
 
                 }
                 seekBar.setEnabled(true);

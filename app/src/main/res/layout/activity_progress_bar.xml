@@ -8,10 +8,10 @@
 
     <include
         android:id="@+id/seek_staff2"
-        android:layout_centerInParent="true"
         layout="@layout/new_seekbar"
         android:layout_width="wrap_content"
         android:layout_height="95dp"
+        android:layout_centerInParent="true"
         android:progress="1" />
 
     <TextView
@@ -36,12 +36,36 @@
         android:textSize="21sp"
         android:layout_marginTop="25dp"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtUserIsEnter"
+        android:layout_below="@id/txtIncrese"
+        android:text="-"
+        android:layout_centerInParent="true"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        android:layout_marginTop="25dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtUserIsExit"
+        android:layout_below="@id/txtUserIsEnter"
+        android:text="-"
+        android:layout_centerInParent="true"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        android:layout_marginTop="25dp"/>
+
+
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btnClear"
         android:text="Save"
-        android:layout_below="@id/txtIncrese"
+        android:layout_below="@id/txtUserIsExit"
         android:layout_centerInParent="true"
         android:textAllCaps="false"/>
 
