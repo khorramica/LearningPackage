@@ -6,21 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".Prpgressbar.ProgressBarActivity">
 
-    <include
-        android:id="@+id/seek_staff2"
-        layout="@layout/new_seekbar"
-        android:layout_width="wrap_content"
-        android:layout_height="95dp"
-        android:layout_centerInParent="true"
-        android:progress="1" />
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/txtValue"
-        android:layout_below="@id/seek_staff2"
         android:text="Sample"
-        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
         android:textColor="@color/black"
         android:textSize="21sp"
         android:layout_marginTop="25dp"/>
@@ -31,7 +24,7 @@
         android:id="@+id/txtIncrese"
         android:layout_below="@id/txtValue"
         android:text="-"
-        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
         android:textColor="@color/black"
         android:textSize="21sp"
         android:layout_marginTop="25dp"/>
@@ -42,7 +35,7 @@
         android:id="@+id/txtUserIsEnter"
         android:layout_below="@id/txtIncrese"
         android:text="-"
-        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
         android:textColor="@color/black"
         android:textSize="21sp"
         android:layout_marginTop="25dp"/>
@@ -53,12 +46,20 @@
         android:id="@+id/txtUserIsExit"
         android:layout_below="@id/txtUserIsEnter"
         android:text="-"
-        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
         android:textColor="@color/black"
         android:textSize="21sp"
         android:layout_marginTop="25dp"/>
 
-
+    <include
+        android:id="@+id/seek_staff2"
+        layout="@layout/new_seekbar"
+        android:layout_width="wrap_content"
+        android:layout_height="95dp"
+        android:layout_below="@id/btnClear"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="25dp"
+        android:progress="1" />
 
     <Button
         android:layout_width="wrap_content"
@@ -66,7 +67,7 @@
         android:id="@+id/btnClear"
         android:text="Save"
         android:layout_below="@id/txtUserIsExit"
-        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
         android:textAllCaps="false"/>
 
 </RelativeLayout>

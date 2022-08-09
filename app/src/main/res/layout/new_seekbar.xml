@@ -13,14 +13,6 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-                <TextView
-                    android:id="@+id/txtBack"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="dsdsdsd"
-                    android:gravity="center"
-                    android:layout_centerInParent="true"
-                    android:visibility="visible" />
 
                 <SeekBar
                     android:id="@+id/seekBar_luminosite"
@@ -35,8 +27,8 @@
                     android:progress="9"
                     android:progressDrawable="@drawable/seekbar_style"
                     android:splitTrack="false"
-                    android:text="dsdsdsd"
                     android:thumb="@drawable/thumb_style" />
+
 
 
             </RelativeLayout>

@@ -14,4 +14,12 @@
     <string name="to_fragment">Receive hello in fragment</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="location_updated">Location Updated: %1$s</string>
+    <string name="launch_activity">Launch activity</string>
+    <string name="remove_location_updates">Remove location updates</string>
+    <string name="slidetounlock_label">slide to unlock</string>
+    <string name="slidetounlock_label_default">slide to unlock</string>
+
+
 </resources>

@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="ir.khorrami.learningpackage">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
@@ -15,7 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LearningPackage">
         <activity
-            android:name=".Prpgressbar.ProgressBarActivity"
+            android:name=".Tab.TabActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,18 +24,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Prpgressbar.SeekbarActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Progress.ProgressActivity"
+            android:exported="true" />
         <activity
             android:name=".MaterialDesign.LottieActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".NavBar.NavBarActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".RxJava.BehaviorRelay.RxJava_BehaviorRelayActivity"
             android:exported="true" />
